@@ -30,4 +30,3 @@ Included in the Jupyter Notebook is a **Risk Segmentation Scatter Plot** which v
 * **Transparency:** Provides a clear audit trail of why a loan was approved or flagged for review.
 
 ---
-*This project is part of a 2-part portfolio. Project 2 focuses on advanced SQL querying and database exploration.*
