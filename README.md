@@ -7,7 +7,7 @@ This project demonstrates an end-to-end automated data pipeline designed to stre
 The final results are presented and visualized in a **Jupyter Notebook (Google Colab)** to provide actionable insights for stakeholders.
 
 ## 🛠️ Tools Used
-* **Alteryx Designer:** Data ETL (Extract, Transform, Load) and Business Logic automation.
+* **Alteryx Designer:** Data ETL (Extract, Transform, Load) and Business Logic automation. 
 * **Python (Pandas/Matplotlib):** Data visualization and presentation.
 * **Jupyter Notebook:** Project documentation and reporting.
 
