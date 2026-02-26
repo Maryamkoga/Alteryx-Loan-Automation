@@ -14,7 +14,9 @@ The final results are presented and visualized in a **Jupyter Notebook (Google C
 ## ⚙️ The Alteryx Workflow
 ## Workflow Logic
 ![Alteryx Loan Workflow](Documentation/Alteryx_Workflow_Project1.png)
+
 [Click here to view the high-resolution PDF version](Documentation/Loan_Automation_Alteryx_Workflow.pdf)
+
 The automated engine performs the following steps:
 1.  **Data Cleaning:** Standardizing data types and handling null values from the raw Kaggle dataset.
 2.  **Financial Engineering:** * Calculated **Total Household Income** (Applicant + Co-applicant).
