@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="16" y="53" width="373" height="169" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Data Prep</Caption>
+          <Style TextColor="#314c4a" FillColor="#b3b3ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Data Prep</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="7">
+          <GuiSettings>
+            <Position x="222" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">True</Value>
+              <Value name="Check Box (136)">True</Value>
+              <Value name="List Box (11)">"Loan_ID","Gender","Married","Dependents","Education","Self_Employed","ApplicantIncome","CoapplicantIncome","LoanAmount","Loan_Amount_Term","Credit_History","Property_Area","Loan_Status"</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">True</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="138" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ApplicantIncome" selected="True" type="Int64" size="8" />
+                <SelectField field="CoapplicantIncome" selected="True" type="FixedDecimal" size="254.0" />
+                <SelectField field="LoanAmount" selected="True" type="FixedDecimal" size="254.0" />
+                <SelectField field="Loan_Amount_Term" selected="True" type="Int64" size="8" />
+                <SelectField field="Credit_History" selected="True" type="Int64" size="8" />
+                <SelectField field="Loan_Status" selected="True" type="Bool" size="1" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="41" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\ADMIN\Downloads\train.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>train.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Loan_ID" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Gender" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Married" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Dependents" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Education" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Self_Employed" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="ApplicantIncome" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="CoapplicantIncome" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="LoanAmount" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Loan_Amount_Term" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Credit_History" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Property_Area" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+                <Field name="Loan_Status" size="254" source="File: C:\Users\ADMIN\Downloads\train.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="306" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\ADMIN\AppData\Local\Temp\Alteryx\Engine_4056_22423eaeb8b049ffa0c26843ececd607_\Engine_4056_7cc39ef0d3c34bfaa3c0350035e87ab9~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="413" y="89" width="193" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Calculations</Caption>
+          <Style TextColor="#314c4a" FillColor="#ffa275" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Calculations</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="438" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[ApplicantIncome] + [CoapplicantIncome]" field="Total_Income" size="19.2" type="FixedDecimal" enabled="true" />
+                <FormulaField expression="[LoanAmount]/[Total_Income]" field="Loan Ratio" size="8" type="Double" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Total_Income = [ApplicantIncome] + [CoapplicantIncome]
+Loan Ratio = [LoanAmount]...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="522" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Loan Ratio]&lt;0.35 AND [Credit_History]==1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Loan Ratio]&lt;0.35 AND [Credit_History]==1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="677" y="53" width="118" height="205" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Results</Caption>
+          <Style TextColor="#314c4a" FillColor="#9fffb8" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Results</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="702" y="174" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">C:\Users\ADMIN\Downloads\Review_Required.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+                <SuppressBlankFile>False</SuppressBlankFile>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Review_Required.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="702" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">C:\Users\ADMIN\Downloads\Approved_Loans.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+                <SuppressBlankFile>False</SuppressBlankFile>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Approved_Loans.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="7" Connection="Output26" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output26" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="False" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="True" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Loan_Analysis_Workflow_V1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="2a185c68-13cb-4ebb-9f88-c63d3c4b2bea" />
+      <Telemetry>
+        <PreviousWorkflowId value="23b84e20-1c34-4dcb-9bf7-ccc181ceee79" />
+        <OriginWorkflowId value="23b84e20-1c34-4dcb-9bf7-ccc181ceee79" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
